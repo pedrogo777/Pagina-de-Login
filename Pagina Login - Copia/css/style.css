@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: rgb(255,255,255);
+    background: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(180,189,255,1) 87%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 200,
+    'opsz' 24
+}
+
+body > div{
+    background-color: white;
+    min-width: 450px;
+    padding: 50px;
+    border-radius: 30px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dados{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.dados input{
+    width: 100%;
+    outline: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(86, 13, 223);
+    padding: 0px 55px 15px 20px;
+}
+
+.dados span{
+    position: relative;
+    bottom: 37px;
+    right: 20px;
+}
+
+.remeberForgot{
+    display: flex;
+    justify-content: space-between;
+}
+
+.remeberForgot input{
+    accent-color: rgb(86, 13, 223);
+}
+
+
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+a:hover{
+    color: rgb(86, 13, 223);
+    font-weight: 500;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+.login{
+    color: white;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(86, 13, 223);
+    padding: 10px;
+    border-radius: 30px;
+    margin: 25px 0 25px 0;
+}
+
+.login:hover{
+    color: black;
+    background-color: white;
+    box-shadow: 0 1px 5px black;
+    cursor: pointer;
+}
+
+.semConta {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+
+.ilustracao{
+    min-height: 433px;
+    background-image: url(../359472-vector-roxo-paisagem-ilustracao-vetor.png);
+    background-size: cover;
+    background-position-x: center;
+    position: relative;
+    right: 50px;
+    z-index: -1;
+}
+
+@media screen and (max-width: 900px) {
+    body{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .ilustracao{
+        min-height: unset;
+        position: initial;
+        right: 0;
+        width: 100%;
+        border-radius: 0;
+        height: 220px;
+    }
+
+    body > div{
+        width: 100%;
+        height: unset;
+        min-width: unset;
+    }
+
+    .areaLogin{
+        height: 50em;
+        margin-top: -30px;
+        border-radius: 30px 30px 0 0;
+        padding: 30px;
+    }
+
+    .remeberForgot{
+        flex-direction: column-reverse;
+    }
+
+    .remeberForgot > a{
+        margin-bottom: 10px;
+    }
+
+    ::-webkit-scrollbar{
+        width: 0;
+    }
+}
